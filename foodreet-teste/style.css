@@ -1,0 +1,805 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*GERAL*/
+
+.body-cadastro,
+.body-index,
+.body-termo {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right, rgb(253, 76, 6), rgb(238, 149, 32));
+}
+
+.main-index,
+.main-cadastro {
+    width: 85%;
+    height: 600px;
+    max-width: 460px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+
+/*PAGINA CADASTRO*/
+
+
+.input-box input {
+    width: 90%;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 2px;
+    margin-top: 15px;
+    padding-left: 15px;
+    border: 1px solid orange;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+    outline-color: rgb(231, 150, 0);
+}
+
+.input-checkbox {
+    margin-top: 20px;
+}
+
+.input-checkbox input {
+    cursor: pointer;
+}
+
+.button-cadastro button {
+    width: 60%;
+    height: 40px;
+    margin-top: 30px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    background-color: rgb(255, 102, 0);
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.button-cadastro button:hover {
+    background-color: orange;
+    color: #fff;
+}
+
+/*PAGINA TERMO*/
+
+.container {
+    width: 100%;
+    padding: 20px;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.textbox {
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .content {
+        padding: 10px;
+    }
+
+    .container {
+        height: 100vh;
+    }
+}
+
+
+/*PAGINA LOGIN*/
+
+
+.logo-FoodReet-login {
+    margin-top: 40px;
+}
+
+.box-SenhaLogin,
+.box-SenhaCadastro,
+.box-confirm-SenhaCadastro {
+    position: relative;
+}
+
+.input-box-login input {
+    width: 90%;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 2px;
+    margin-top: 15px;
+    padding-left: 15px;
+    border: 1px solid orange;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+    outline-color: rgb(231, 150, 0);
+}
+
+.input-box-login a {
+    display: flex;
+    width: 175px;
+    margin-left: 60%;
+    margin-top: 10px;
+    text-decoration: none;
+    white-space: nowrap;
+    color: black;
+}
+
+.input-box-c {
+    display: flex;
+    justify-content: end;
+}
+
+.input-box-c a {
+    display: flex;
+    margin-right: 20px;
+    margin-top: 10px;
+    text-decoration: none;
+    white-space: nowrap;
+    color: black;
+}
+
+.button-login button {
+    width: 60%;
+    height: 40px;
+    margin-top: 50px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    background-color: rgb(255, 102, 0);
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.button-login button:hover {
+    background-color: orange;
+    color: #fff;
+}
+
+.social-menu-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.social-menu-login a {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+}
+
+.social-menu-login img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 12px;
+}
+
+.link-cadastro {
+    margin-top: 20px;
+}
+
+.link-login {
+    margin-top: 50px;
+}
+
+/*OLHOS PARA MOSTRAR SENHAS*/
+
+#icon,
+#icon2,
+#icon3 {
+    top: 40%;
+    left: 85%;
+    background: url('img/olhoA.png');
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    position: absolute;
+}
+
+#icon.hide,
+#icon2.hide,
+#icon3.hide {
+    background: url('img/olhoF.png');
+    background-size: cover;
+}
+
+/*PAGINA ESQUECEU SENHA, SENHAS DIFERENTES, ACEITAR TERMOS*/
+
+.popup,
+.popup2,
+.popup3 {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.logo-FoodReet-popup {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-FoodReet-popup img {
+    width: 120px;
+    height: auto;
+}
+
+.input-box-popup p {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.input-box-popup input {
+    width: calc(100% - 20px);
+    height: 40px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s;
+}
+
+.input-box-popup input:focus {
+    border-color: #ff7f0e;
+    outline: none;
+}
+
+.input-box-popup button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff7f0e;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.input-box-popup button:hover {
+    background-color: #e66400;
+}
+
+.popup-content {
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/*PAGINA HOME*/
+
+.body-home {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 650px;
+}
+
+.header-home {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+.lista-menu {
+    display: flex;
+    align-items: center;
+}
+
+.option-select {
+    padding: 0 30px;
+}
+
+.option-select a {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+    text-decoration: none;
+}
+
+.option-select a:hover .icon-lista-menu {
+    fill: rgb(255, 102, 0);
+}
+
+.option-select a:hover {
+    color: orange;
+}
+
+.header-home .icon-lista-menu {
+    width: 40px;
+    height: 40px;
+}
+
+.main-home {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+}
+
+.img-principal-home {
+    overflow: hidden; 
+    position: relative;
+}
+
+.mudar-slides {
+    display: flex;
+    transition: transform 0.5s ease; 
+    width: 300%;
+}
+
+.slide-restaurantes {
+    flex: 0 0 33.333%; 
+    max-width: 100%; 
+}
+
+.slide-restaurantes img {
+    width: 100%; 
+    height: auto; 
+}
+
+.mudar-slide {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+}
+
+.mudar-slide button{
+  color: white;
+}
+
+.prev,
+.next {
+    background-color: transparent;
+    border: none;
+    font-size: 60px;
+    cursor: pointer;
+}
+
+.button-outros button:hover,
+.blogs button:hover,
+.footer-home button:hover {
+    background-color: rgb(255, 166, 0);
+}
+
+.opcao-restaurantes button:hover,
+.opcao-restaurantes2 button:hover {
+    color: white;
+    background-color: rgb(255, 102, 0);
+}
+
+.outros-restaurantes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.outros-restaurantes button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 150px;
+    cursor: pointer;
+}
+
+.coluna {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.opcao-restaurantes,
+.opcao-restaurantes2 {
+    display: flex;
+    width: 90%;
+    justify-content: center;
+}
+
+.opcao-restaurantes button,
+.opcao-restaurantes2 button {
+    border: none;
+    border-radius: 20px;
+    background: white;
+    padding: 20px;
+}
+
+.veganos,
+.cafe,
+.hambuerguer,
+.sorvetes,
+.massas,
+.docerias {
+    display: flex;
+    width: 100%;
+}
+
+.opcao-restaurantes img,
+.opcao-restaurantes2 img {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+}
+
+.info {
+    width: 100%;
+}
+
+.button-outros {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.button-outros button {
+    width: 15%;
+    height: 40px;
+    margin-top: 20px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    background-color: rgb(255, 102, 0);
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.melhores-avaliados {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.melhores-avaliados button {
+    border: none;
+    cursor: pointer;
+}
+
+.melhores-restaurantes {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin-top: 30px;
+}
+
+.img-melhores-restaurantes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.melhores-restaurantes button {
+    display: flex;
+    width: 80%;
+    padding: 5px;
+    background: white;
+    border-radius: 10px;
+}
+
+.melhores-restaurantes button:hover {
+    background-color: rgb(255, 102, 0);
+}
+
+.melhores-restaurantes img {
+    width: 100%;
+    border: 1px solid rgb(207, 205, 205);
+    border-radius: 10px;
+}
+
+.linha {
+    display: flex;
+    justify-content: center;
+}
+
+.linha-personalizada {
+    width: 25%;
+    height: 1px;
+    background-color: #000;
+    margin: 30px 0;
+}
+
+.blogs {
+    display: flex;
+    width: 100%;
+    height: 400px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.blogs-comentarios {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.setas {
+    display: flex;
+}
+
+.setas button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;   
+    border: none;
+    cursor: pointer;
+}
+
+.setas .icon-lista-menu:hover {
+    fill: white;
+}
+
+.aspasCima {
+    display: flex;
+    align-items: start;
+    height: 100%;
+}
+
+.aspasBaixo {
+    display: flex;
+    align-items: end;
+    height: 100%;
+}
+
+.aspasCima img,
+.aspasBaixo img {
+    width: 30px;
+    height: 30px;
+}
+
+.img-comentarios {
+    display: flex;   
+}
+
+.img-comentarios img {
+    width: 160px;
+    height: 160px;
+    background: white;
+}
+
+.comentarios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.blogs-comentarios button {
+    width: 50px;
+    height: 50px;
+}
+
+.footer-home {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background: #FF6624;
+    margin-top: 30px;
+}
+
+.options-info {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    color: white;
+}
+
+.logo-FoodReet-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.social-menu-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+.social-menu-home img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 12px;
+}
+
+.links-social-menu-home {
+    display: flex;
+    margin-top: 5px;
+}
+
+.links-social-menu-home .icon-lista-menu {
+    fill: white;
+}
+
+.links-social-menu-home .icon-lista-menu:hover {
+    fill: rgb(255, 102, 0);
+    background-color: white;
+    border-radius: 20%;
+}
+
+.links-social-menu-home a {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+}
+
+.options-info2 {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+}
+
+.options-info2 a {
+    color: white;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.options-info2 a:hover {
+    color: #FF6624;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.feedback {
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.feedback-envio {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    color: white;
+}
+
+.feedback-envio input {
+    width: 100%;
+    height: 40px;
+}
+
+.feedback-envio button {
+    width: 50%;
+    height: 30px;
+    margin-top: 10px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(20, 4, 4);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.pagamentos {
+    display: flex;
+    width: 100%;
+    height: 30px;
+    margin-top: 20px;
+    column-gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagamentos img {
+    border-radius: 2px;
+}
+
+#visa, #master{
+    width: 55px;
+}
+
+#visa:hover, #master:hover {
+    width: 60px;
+} 
+
+#paypal {
+    width: 75px;
+}
+
+#paypal:hover {
+    width: 80px;
+}
+
+@media only screen and (max-width: 840px) {
+    
+    .opcao-restaurantes, .opcao-restaurantes2 {
+       display: flex;
+       flex-direction: column;
+    }
+
+    .coluna {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img-comentarios img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .header-home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+      }
+
+}
