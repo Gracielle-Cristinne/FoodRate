@@ -1,46 +1,3 @@
-<?php
-// Dados de conexão ao banco de dados
-$host = 'localhost'; // mudem apenas isso dependendo do nome da conexão do mysql de vocês
-$usuario = 'root';
-$senha = '';
-$banco = 'foodrate';
-$porta = 3306;
-
-// Conexão com o banco de dados não mexam.
-$conexao = new mysqli($host, $usuario, $senha, $banco, $porta);
-
-// Verificação de erros na conexão
-if ($conexao->connect_error) {
-    die("Erro na conexão: " . $conexao->connect_error);
-}
-
-
-$loginErro = '';
-
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nickName = $_POST['inputNameUsuario'];
-    $senha = $_POST['inputSenha'];
-    
-    // Isso aqui consulta se existe o usuario e senha digitados nos inputs
-    $sql = "SELECT * FROM usuarios WHERE nick_name='$nickName' AND senha='$senha'";
-    $resultado = $conexao->query($sql);
-
-    // Aqui verifica se encontrou algum usuario
-    if ($resultado->num_rows > 0) {
-        // para reirecionar para a tela de home
-        header("Location: pagina_de_sucesso.php"); 
-        exit();
-    } else {
-    
-        $loginErro = "Nome de usuário ou senha incorretos.";
-    }
-    
-  
-    $conexao->close();
-}
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -52,10 +9,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="shortcut icon" href="img/icon.png">
 </head>
 
-<body>
-    <main>
+<body class="body-index">
+    <main class="main-index">
 
-        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+        <form action="#">
 
             <section class="logo-FoodReet-login">
                 <img src="img/FoodRate.png">
@@ -74,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </section>
                                     
             <section class="button-login">
-                <button type="submit" id="button-login" name="button-login"> ENTRAR </button>
+                <button type="button" id="button-login" name="button-login"> ENTRAR </button>
             </section>
 
             <div class="social-menu-login">
@@ -84,33 +41,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
 
             <section class="link-cadastro">
-                <span> ainda não tem conta ? </span><a href="cadastro.php">Cadastre-se</a>
+                <span> ainda não tem conta ? </span><a href="cadastro.html">Cadastre-se</a>
             </section>
           
         </form>
 
-        <div id="popupErro" class="popup" style="<?php echo !empty($loginErro) ? 'display: block;' : 'display: none;'; ?>">
+        <div id="forgotPasswordPopup" class="popup">
             <div class="popup-content">
-                <span class="close" onclick="fecharpopuperrologin()">&times;</span>
+                <span class="close" onclick="closePopup()">&times;</span>
                 <section class="logo-FoodReet-popup">
                     <img src="img/FoodRate.png">
                 </section>
                 <section class="input-box-popup">
-                    <p id="p1"><?php echo $loginErro; ?></p>
+                    <p>Insira o e-mail para recuperação de senha</p>
+                    <form>
+                        <input type="email" id="inputEmail" name="inputEmail" placeholder="Seu e-mail" required>
+                        <button type="submit">Enviar</button>
+                    </form>
                 </section>
             </div>
         </div>
 
     </main>
 <script src="script.js"></script>
-<script>
-     function fecharpopuperrologin(){
-        document.getElementById('popupErro').style.display = 'none';
-    }
-    setTimeout(() => {
-        fecharpopuperrologin()
-    }, 3000 );
-</script>
 </body>
 
 </html>
