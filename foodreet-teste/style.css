@@ -321,15 +321,19 @@
 
 /*PAGINA HOME*/
 
-.body-home {
+.body-home,
+.body-Restaurantes {
     width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 650px;
+    min-width: 665px;
 }
 
-.header-home {
+.header-home,
+.header-blog,
+.header-Restaurantes {
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -361,37 +365,67 @@
     color: orange;
 }
 
-.header-home .icon-lista-menu {
+.header-home .icon-lista-menu,
+.header-blog .icon-lista-menu,
+.header-Restaurantes .icon-lista-menu {
     width: 40px;
     height: 40px;
 }
 
-.main-home {
+.main-home,
+.main-blog,
+.main-Restaurantes {
     display: flex;
     width: 90%;
     flex-direction: column;
 }
 
 .img-principal-home {
-    overflow: hidden; 
+    overflow: hidden;
     position: relative;
 }
 
 .mudar-slides {
     display: flex;
-    transition: transform 0.5s ease; 
+    transition: transform 0.5s ease;
     width: 300%;
 }
 
-.slide-restaurantes {
-    flex: 0 0 33.333%; 
-    max-width: 100%; 
-}
 
 .slide-restaurantes img {
-    width: 100%; 
-    height: auto; 
+    width: 100%;
+    height: auto;
 }
+
+.slide-restaurantes button {
+    width: 15%;
+    height: 40px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    background-color: rgb(255, 102, 0);
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    /* Posição ajustada para ficar na parte inferior do slide */
+    top: 70%;
+    left: 70%;
+    /* Posição ajustada para centralizar o botão horizontalmente */
+    transform: translateX(-50%);
+    /* Posição ajustada para centralizar o botão horizontalmente */
+}
+
+.slide-restaurantes {
+    position: relative;
+    /* Alterado para relativo */
+    flex: 0 0 33.333%;
+    max-width: 100%;
+    overflow: hidden;
+    /* Adicionado para evitar que o botão "Avaliar" fique fora do slide */
+
+}
+
 
 .mudar-slide {
     position: absolute;
@@ -403,8 +437,8 @@
     justify-content: space-between;
 }
 
-.mudar-slide button{
-  color: white;
+.mudar-slide button {
+    color: white;
 }
 
 .prev,
@@ -417,7 +451,10 @@
 
 .button-outros button:hover,
 .blogs button:hover,
-.footer-home button:hover {
+.footer-home button:hover,
+.footer-blog button:hover,
+.footer-Restaurantes button:hover,
+.slide-restaurantes button:hover {
     background-color: rgb(255, 166, 0);
 }
 
@@ -426,6 +463,7 @@
     color: white;
     background-color: rgb(255, 102, 0);
 }
+
 
 .outros-restaurantes {
     display: flex;
@@ -437,7 +475,6 @@
 
 .outros-restaurantes button {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -461,7 +498,8 @@
 }
 
 .opcao-restaurantes button,
-.opcao-restaurantes2 button {
+.opcao-restaurantes2 button,
+.restaurente-cardapio button {
     border: none;
     border-radius: 20px;
     background: white;
@@ -486,7 +524,7 @@
 }
 
 .info {
-    width: 100%;
+    width: 60%;
 }
 
 .button-outros {
@@ -528,9 +566,6 @@
 
 .img-melhores-restaurantes {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
 }
 
 .melhores-restaurantes button {
@@ -563,7 +598,8 @@
     margin: 30px 0;
 }
 
-.blogs {
+.blogs,
+.blogs-restaurante {
     display: flex;
     width: 100%;
     height: 400px;
@@ -572,12 +608,17 @@
     align-items: center;
 }
 
-.blogs-comentarios {
+.blogs-comentarios,
+.comentarios-restaurante {
     display: flex;
     width: 100%;
     height: 100%;
     align-items: center;
     justify-content: center;
+}
+
+.mudar-comentarios {
+    max-width: 1100px;
 }
 
 .setas {
@@ -588,7 +629,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 100%;   
+    border-radius: 100%;
     border: none;
     cursor: pointer;
 }
@@ -616,7 +657,7 @@
 }
 
 .img-comentarios {
-    display: flex;   
+    display: flex;
 }
 
 .img-comentarios img {
@@ -637,7 +678,31 @@
     height: 50px;
 }
 
-.footer-home {
+/*BUTTON CONTINUAR COMENTARIOS (MODIFICAÇÃO)*/
+
+.button-continuar-comentarios {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.button-continuar-comentarios button {
+    width: 120px;
+    height: 40px;
+    margin-top: 20px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    background-color: rgb(255, 102, 0);
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+
+.footer-home,
+.footer-blog,
+.footer-Restaurantes {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -658,36 +723,42 @@
     align-items: start;
 }
 
-.social-menu-home {
+.social-menu-home,
+.social-menu-blog {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 15px;
 }
 
-.social-menu-home img {
+.social-menu-home img,
+.social-menu-blog img {
     width: 40px;
     height: 40px;
     border-radius: 100px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 4px 12px;
 }
 
-.links-social-menu-home {
+.links-social-menu-home,
+.links-social-menu-blog {
     display: flex;
     margin-top: 5px;
 }
 
-.links-social-menu-home .icon-lista-menu {
+.links-social-menu-home .icon-lista-menu,
+.links-social-menu-blog .icon-lista-blog {
     fill: white;
 }
 
-.links-social-menu-home .icon-lista-menu:hover {
+.links-social-menu-home .icon-lista-menu:hover,
+.links-social-menu-blog .icon-lista-blog:hover {
     fill: rgb(255, 102, 0);
     background-color: white;
     border-radius: 20%;
 }
 
-.links-social-menu-home a {
+.links-social-menu-home a,
+.links-social-menu-blog a {
     width: 40px;
     height: 40px;
     margin: 0 10px;
@@ -731,6 +802,9 @@
 .feedback-envio input {
     width: 100%;
     height: 40px;
+    border-radius: 3px;
+    border: none;
+    padding: 5px;
 }
 
 .feedback-envio button {
@@ -745,41 +819,162 @@
     cursor: pointer;
 }
 
-.pagamentos {
-    display: flex;
+/*PAGINA BLOG*/
+
+.body-blog {
     width: 100%;
-    height: 30px;
-    margin-top: 20px;
-    column-gap: 15px;
-    justify-content: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 806px;
+}
+
+.img-comentarios-blog {
+    display: flex;
     align-items: center;
 }
 
-.pagamentos img {
-    border-radius: 2px;
+.img-comentarios-blog img {
+    width: 150px;
+    height: 150px;
 }
 
-#visa, #master{
-    width: 55px;
+.avaliacoes-comentarios-perfil {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    padding: 20px;
 }
 
-#visa:hover, #master:hover {
-    width: 60px;
-} 
-
-#paypal {
-    width: 75px;
+.avaliacoes-comentarios-perfil img {
+    width: 50px;
 }
 
-#paypal:hover {
-    width: 80px;
+.avaliacoes-perfil,
+.comentarios-perfil {
+    display: flex;
+    width: 25%;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    border-radius: 10px;
+}
+
+.comentarios-usuario img {
+    width: 100px;
+    height: 100px;
+}
+
+.img-comentarios-blog {
+    margin-top: 20px;
+}
+
+.footer-blog {
+    margin-top: 150px;
+}
+
+/*PAGINA RESTAURANTE AVALICAO*/
+
+.main-Restaurantes h2 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.restaurante-avaliacao {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    font-size: 50px;
+    color: rgb(251, 235, 10);
+}
+
+.restaurante-avaliacao .star {
+    cursor: pointer;
+}
+
+.restaurante-avaliacao .star.active {
+    opacity: 0;
+    animation: animacao .5s ease-in-out forwards;
+}
+
+@keyframes animacao {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.restaurante-avaliacao .star:hover {
+    transform: scale(1.1);
+}
+
+.info-restaurante {
+    margin-top: 50px;
+}
+
+.info-restaurante h3 {
+    display: flex;
+    justify-content: left;
+    margin-top: 15px;
+}
+
+.restaurente-cardapio {
+    margin-top: 5%;
+}
+
+.restaurente-cardapio button {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    border: none;
+    border-radius: 7px;
+    background: white;
+    padding: 20px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.restaurente-cardapio button img {
+    margin-right: 10px;
+    width: 250px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.restaurente-cardapio button:hover {
+    color: white;
+    background-color: rgb(251, 118, 29);
+}
+
+.img-restaurante img {
+    width: 100%;
 }
 
 @media only screen and (max-width: 840px) {
-    
-    .opcao-restaurantes, .opcao-restaurantes2 {
-       display: flex;
-       flex-direction: column;
+
+    .opcao-restaurantes,
+    .opcao-restaurantes2,
+    .restaurente-cardapio {
+        display: flex;
+        flex-direction: column;
     }
 
     .coluna {
@@ -794,12 +989,86 @@
         height: 130px;
     }
 
-    .header-home {
+    .header-home,
+    .header-Restaurantes {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         padding: 15px;
-      }
+    }
 
+}
+
+/*AREA DOS COMENTARIOS DO RESTAURANTE*/
+.comentarios-restaurante {
+    margin-top: 10%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.comentarios-restaurante h3 {
+    font-size: 24px;
+    color: #212121;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.comment-form {
+    margin-bottom: 20px;
+}
+
+#comment-text {
+    width: 100%;
+    min-height: 56px;
+    padding: 8px 12px;
+    font-size: 16px;
+    line-height: 1.5;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    resize: none;
+}
+
+.button-comentar {
+    display: flex;
+    justify-content: center;
+}
+
+.button-comentar button {
+    width: 100%;
+    max-width: 200px;
+    height: 36px;
+    padding: 0 16px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    background-color: rgb(255, 102, 0);
+    color: white;
+    border-radius: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-comentar button:hover {
+    background-color: orange;
+    color: #fff;
+}
+
+#comments {
+    margin-bottom: 20px;
+}
+
+.comment {
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid orange;
+    margin-bottom: 10px;
+    background-color: #f5f5f5;
+}
+
+.comment p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
 }
