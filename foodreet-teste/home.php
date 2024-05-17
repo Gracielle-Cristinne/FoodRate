@@ -193,227 +193,227 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <div class="coluna">
 
-<div class="opcao-restaurantes d-flex">
+                <div class="opcao-restaurantes d-flex">
 
-    <div class="modal-button">
-        <button type="button" id="openModalBtn1" class="btn" onclick="openModal('restaurantsModal1')">
-            <img src="img/restaurante-chines.jpeg">
-            <div class="A">
+                    <div class="modal-button">
+                        <button type="button" id="openModalBtn1" class="btn" onclick="openModal('restaurantsModal1')">
+                            <img src="img/restaurante-chines.jpeg">
+                            <div class="A">
 
-                <h1>Orientais</h1>
-                <h3>Restaurantes orientais de Recife</h3>
+                                <h1>Orientais</h1>
+                                <h3>Restaurantes orientais de Recife</h3>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div class="modal-button">
+                        <button type="button" id="openModalBtn2" class="btn" onclick="openModal('restaurantsModal2')">
+                            <img src="img/cafes.png">
+                            <div class="A">
+                                <h1>Café</h1>
+                                <h3>Cafeterias de Recife</h3>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div class="modal-button">
+                        <button type="button" id="openModalBtn3" class="btn" onclick="openModal('restaurantsModal3')">
+                            <img src="img/hamburguers.png">
+                            <div class="A">
+                                <h1>Hambúrguer</h1>
+                                <h3>Hamburguerias de Recife</h3>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div class="modal" id="restaurantsModal1" tabindex="-1" aria-labelledby="restaurantsModalLabel1"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <img src="img/iconModal.png">
+                                    <h4 class="modal-title" id="restaurantsModalLabel1">Qual restaurante você deseja
+                                        pesquisar?</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <input type="text" id="searchInput1" class="form-control mb-3"
+                                        placeholder="Pesquisar restaurante">
+                                    <ul id="restaurantsList1" class="list-group"
+                                        style="max-height: 170px; overflow-y: scroll;">
+                                        <li class="list-group-item">Modal 1 teste</li>
+                                    </ul>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn" data-bs-dismiss="modal"
+                                        onclick="closeModal('restaurantsModal1')">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MODAL 2 -->
+                    <div class="modal fade" id="restaurantsModal2" tabindex="-1"
+                        aria-labelledby="restaurantsModalLabel2" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <img src="img/iconModal.png">
+                                    <h4 class="modal-title" id="restaurantsModalLabel2">Qual restaurante você deseja
+                                        pesquisar?</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <input type="text" id="searchInput2" class="form-control mb-3"
+                                        placeholder="Pesquisar restaurante">
+                                    <ul id="restaurantsList2" class="list-group">
+                                        <li class="list-group-item">Modal 2 teste</li>
+                                    </ul>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn" data-bs-dismiss="modal"
+                                        onclick="closeModal('restaurantsModal2')">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MODAL 3 -->
+                    <div class="modal fade" id="restaurantsModal3" tabindex="-1"
+                        aria-labelledby="restaurantsModalLabel3" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <img src="img/iconModal.png">
+                                    <h4 class="modal-title" id="restaurantsModalLabel3">Qual restaurante você deseja
+                                        pesquisar?</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <input type="text" id="searchInput3" class="form-control mb-3"
+                                        placeholder="Pesquisar restaurante">
+                                    <ul id="restaurantsList3" class="list-group">
+                                        <li class="list-group-item">Modal 3 teste</li>
+                                    </ul>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn" data-bs-dismiss="modal"
+                                        onclick="closeModal('restaurantsModal3')">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="opcao-restaurantes2 d-flex">
+
+                    <div class="modal-button">
+                        <button type="button" id="openModalBtn4" class="btn" onclick="openModal('restaurantsModal4')">
+                            <img src="img/sorvetes.png">
+                            <div class="A">
+                                <h1>Sorvetes</h1>
+                                <h3>Sorveterias de Recife</h3>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div class="modal-button">
+                        <button type="button" id="openModalBtn5" class="btn" onclick="openModal('restaurantsModal5')">
+                            <img src="img/massas.png">
+                            <div class="A">
+                                <h1>Pizza</h1>
+                                <h3>Pizzarias de Recife</h3>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div class="modal-button">
+                        <button type="button" id="openModalBtn6" class="btn" onclick="openModal('restaurantsModal6')">
+                            <img src="img/cookies.png">
+                            <div class="A">
+                                <h1>Cookies</h1>
+                                <h3>Docerias de Recife</h3>
+                            </div>
+                        </button>
+                    </div>
+
+
+                    <!--AREA DOS MODAIS PARA CADA CATEGORIA-->
+
+                    <!--MODAL 4-->
+                    <div class="modal fade" id="restaurantsModal4" tabindex="-1"
+                        aria-labelledby="restaurantsModalLabel4" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <img src="img/iconModal.png">
+                                    <h4 class="modal-title" id="restaurantsModalLabel4">Qual restaurante você deseja
+                                        pesquisar?</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <input type="text" id="searchInput4" class="form-control mb-3"
+                                        placeholder="Pesquisar restaurante">
+                                    <ul id="restaurantsList4" class="list-group">
+                                        <li class="list-group-item">Modal 4 teste</li>
+                                    </ul>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn" data-bs-dismiss="modal"
+                                        onclick="closeModal('restaurantsModal4')">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MODAL 5 -->
+                    <div class="modal fade" id="restaurantsModal5" tabindex="-1"
+                        aria-labelledby="restaurantsModalLabel5" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <img src="img/iconModal.png">
+                                    <h4 class="modal-title" id="restaurantsModalLabel5">Qual restaurante você deseja
+                                        pesquisar?</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <input type="text" id="searchInput5" class="form-control mb-3"
+                                        placeholder="Pesquisar restaurante">
+                                    <ul id="restaurantsList5" class="list-group">
+                                        <li class="list-group-item">Modal 5 teste</li>
+                                    </ul>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn" data-bs-dismiss="modal"
+                                        onclick="closeModal('restaurantsModal5')">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MODAL 6 -->
+                    <div class="modal fade" id="restaurantsModal6" tabindex="-1"
+                        aria-labelledby="restaurantsModalLabel6" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <img src="img/iconModal.png">
+                                    <h4 class="modal-title" id="restaurantsModalLabel6">Qual restaurante você deseja
+                                        pesquisar?</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <input type="text" id="searchInput6" class="form-control mb-3"
+                                        placeholder="Pesquisar restaurante">
+                                    <ul id="restaurantsList6" class="list-group">
+                                        <li class="list-group-item">Modal 6 teste</li>
+                                    </ul>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn" data-bs-dismiss="modal"
+                                        onclick="closeModal('restaurantsModal6')">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        </button>
-    </div>
-
-    <div class="modal-button">
-        <button type="button" id="openModalBtn2" class="btn" onclick="openModal('restaurantsModal2')">
-            <img src="img/cafes.png">
-            <div class="A">
-                <h1>Café</h1>
-                <h3>Cafeterias de Recife</h3>
-            </div>
-        </button>
-    </div>
-
-    <div class="modal-button">
-        <button type="button" id="openModalBtn3" class="btn" onclick="openModal('restaurantsModal3')">
-            <img src="img/hamburguers.png">
-            <div class="A">
-                <h1>Hambúrguer</h1>
-                <h3>Hamburguerias de Recife</h3>
-            </div>
-        </button>
-    </div>
-
-    <div class="modal" id="restaurantsModal1" tabindex="-1" aria-labelledby="restaurantsModalLabel1"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <img src="img/iconModal.png">
-                    <h4 class="modal-title" id="restaurantsModalLabel1">Qual restaurante você deseja
-                        pesquisar?</h4>
-                </div>
-                <div class="modal-body">
-                    <input type="text" id="searchInput1" class="form-control mb-3"
-                        placeholder="Pesquisar restaurante">
-                    <ul id="restaurantsList1" class="list-group"
-                        style="max-height: 170px; overflow-y: scroll;">
-                        <li class="list-group-item">Modal 1 teste</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn" data-bs-dismiss="modal"
-                        onclick="closeModal('restaurantsModal1')">Fechar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- MODAL 2 -->
-    <div class="modal fade" id="restaurantsModal2" tabindex="-1"
-        aria-labelledby="restaurantsModalLabel2" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <img src="img/iconModal.png">
-                    <h4 class="modal-title" id="restaurantsModalLabel2">Qual restaurante você deseja
-                        pesquisar?</h4>
-                </div>
-                <div class="modal-body">
-                    <input type="text" id="searchInput2" class="form-control mb-3"
-                        placeholder="Pesquisar restaurante">
-                    <ul id="restaurantsList2" class="list-group">
-                        <li class="list-group-item">Modal 2 teste</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn" data-bs-dismiss="modal"
-                        onclick="closeModal('restaurantsModal2')">Fechar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- MODAL 3 -->
-    <div class="modal fade" id="restaurantsModal3" tabindex="-1"
-        aria-labelledby="restaurantsModalLabel3" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <img src="img/iconModal.png">
-                    <h4 class="modal-title" id="restaurantsModalLabel3">Qual restaurante você deseja
-                        pesquisar?</h4>
-                </div>
-                <div class="modal-body">
-                    <input type="text" id="searchInput3" class="form-control mb-3"
-                        placeholder="Pesquisar restaurante">
-                    <ul id="restaurantsList3" class="list-group">
-                        <li class="list-group-item">Modal 3 teste</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn" data-bs-dismiss="modal"
-                        onclick="closeModal('restaurantsModal3')">Fechar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="opcao-restaurantes2 d-flex">
-
-    <div class="modal-button">
-        <button type="button" id="openModalBtn4" class="btn" onclick="openModal('restaurantsModal4')">
-            <img src="img/sorvetes.png">
-            <div class="A">
-                <h1>Sorvetes</h1>
-                <h3>Sorveterias de Recife</h3>
-            </div>
-        </button>
-    </div>
-
-    <div class="modal-button">
-        <button type="button" id="openModalBtn5" class="btn" onclick="openModal('restaurantsModal5')">
-            <img src="img/massas.png">
-            <div class="A">
-                <h1>Pizza</h1>
-                <h3>Pizzarias de Recife</h3>
-            </div>
-        </button>
-    </div>
-
-    <div class="modal-button">
-        <button type="button" id="openModalBtn6" class="btn" onclick="openModal('restaurantsModal6')">
-            <img src="img/cookies.png">
-            <div class="A">
-                <h1>Cookies</h1>
-                <h3>Docerias de Recife</h3>
-            </div>
-        </button>
-    </div>
-
-
-    <!--AREA DOS MODAIS PARA CADA CATEGORIA-->
-
-    <!--MODAL 4-->
-    <div class="modal fade" id="restaurantsModal4" tabindex="-1"
-        aria-labelledby="restaurantsModalLabel4" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <img src="img/iconModal.png">
-                    <h4 class="modal-title" id="restaurantsModalLabel4">Qual restaurante você deseja
-                        pesquisar?</h4>
-                </div>
-                <div class="modal-body">
-                    <input type="text" id="searchInput4" class="form-control mb-3"
-                        placeholder="Pesquisar restaurante">
-                    <ul id="restaurantsList4" class="list-group">
-                        <li class="list-group-item">Modal 4 teste</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn" data-bs-dismiss="modal"
-                        onclick="closeModal('restaurantsModal4')">Fechar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- MODAL 5 -->
-    <div class="modal fade" id="restaurantsModal5" tabindex="-1"
-        aria-labelledby="restaurantsModalLabel5" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <img src="img/iconModal.png">
-                    <h4 class="modal-title" id="restaurantsModalLabel5">Qual restaurante você deseja
-                        pesquisar?</h4>
-                </div>
-                <div class="modal-body">
-                    <input type="text" id="searchInput5" class="form-control mb-3"
-                        placeholder="Pesquisar restaurante">
-                    <ul id="restaurantsList5" class="list-group">
-                        <li class="list-group-item">Modal 5 teste</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn" data-bs-dismiss="modal"
-                        onclick="closeModal('restaurantsModal5')">Fechar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- MODAL 6 -->
-    <div class="modal fade" id="restaurantsModal6" tabindex="-1"
-        aria-labelledby="restaurantsModalLabel6" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <img src="img/iconModal.png">
-                    <h4 class="modal-title" id="restaurantsModalLabel6">Qual restaurante você deseja
-                        pesquisar?</h4>
-                </div>
-                <div class="modal-body">
-                    <input type="text" id="searchInput6" class="form-control mb-3"
-                        placeholder="Pesquisar restaurante">
-                    <ul id="restaurantsList6" class="list-group">
-                        <li class="list-group-item">Modal 6 teste</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn" data-bs-dismiss="modal"
-                        onclick="closeModal('restaurantsModal6')">Fechar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-</div>
 
             <div class="button-outros">
                 <button type="button" onclick="openPopupButtonOutros()">Mais opções</button>
@@ -630,7 +630,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     </script>
     <script src="script.js"></script>
-  
+
 </body>
 
 </html>
